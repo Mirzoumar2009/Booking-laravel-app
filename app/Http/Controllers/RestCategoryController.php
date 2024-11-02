@@ -10,55 +10,55 @@ class RestCategoryController extends Controller
     public function index()
     {
         $rests = RestCategory::all();
-        return view('rest.index', compact('rests'));
+        return view('rests.index', compact('rests'));
     }
 
 
     public function create()
     {
         $rests = RestCategory::all();
-        return view('rest.create', compact('rests'));
+        return view('rests.create', compact('rests'));
     }
 
     public function store(Request $request)
     {
         $restss = $request->validate([
             'name' => 'required|string',
-            'description' => 'required|string',
+            'description' => 'string',
         ]);
 
         RestCategory::create($restss);
-        return redirect()->route('rest.index')->with('success', 'Rest успешно добавлена');
+        return redirect()->route('rests.index')->with('success', 'Rest успешно добавлена');
     }
 
     public function show($id)
     {
         $rests = RestCategory::findOrFail($id);
-        return view('rest.show', compact('rests'));
+        return view('rests.show', compact('rests'));
     }
 
     public function edit($id)
     {
         $rest = RestCategory::findOrFail($id);
-        return view('rest.edit', compact('rest'));
+        return view('rests.edit', compact('rest'));
     }
 
     public function update(Request $request, $id)
     {
         $request->validate([
             'name' => 'required|string',
-            'description' => 'required|string',
+            'description' => 'string',
         ]);
 
         $rest = RestCategory::findOrFail($id);
         $rest->update($request->all());
-        return redirect('/rest')->with('success', 'Rest updated successfulle');
+        return redirect('/rests')->with('success', 'Rest updated successfulle');
     }
 
     public function destroy($id)
     {
         $rests = RestCategory::findOrFail($id);
         $rests->delete();
-        return redirect('/rest')->with('success', 'Rest deleted successfully');
+        return redirect('/rests')->with('success', 'Rest deleted successfully');
     }
 }
