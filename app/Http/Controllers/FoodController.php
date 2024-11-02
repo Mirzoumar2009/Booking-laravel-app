@@ -11,6 +11,7 @@ class FoodController extends Controller
 {
     public function index()
     {
+        $inakurkun="0";
         $foods = Food::with(['restaurant', 'foodcategory'])->get();
         return view('food.index', compact('foods'));
     }
