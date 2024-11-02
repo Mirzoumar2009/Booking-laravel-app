@@ -25,14 +25,14 @@
                 <td>{{$rest->updated_at}}</td>
                 <td><a class="btn btn-outline-warning" href="{{route('rests.edit', $rest)}}">change</a></td>
                 <td>
-                    <form action="{{route('rests.destroy', $user)}}" method="post">
+                    <form action="{{route('rests.destroy', $rest)}}" method="post">
                         @csrf
                         @method('delete')
                         <input class="btn btn-outline-danger" type="submit" value="delete">
                     </form>
                 </td>
                 <td>
-                    <form action="{{route('users.show', $user)}}" method="post">
+                    <form action="{{route('rests.show', $rest)}}" method="post">
                         @csrf
                         @method('get')
                         <input class="btn btn-outline-success" type="submit" value="show">
@@ -41,5 +41,5 @@
             </tr>
         @endforeach
     </table>
-    <a class="btn btn-outline-primary" href="{{route('users.create')}}">add</a>
+    <a class="btn btn-outline-primary" href="{{route('rests.create')}}">add</a>
 @endsection

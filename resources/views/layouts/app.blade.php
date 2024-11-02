@@ -129,6 +129,22 @@
 
                         </ul>
                     </li>
+                    <li class="nav-item menu-close"> <a href="#" class="nav-link active"> <i class="nav-icon bi bi-speedometer"></i>
+                            <p>
+                                Rests
+                                <i class="nav-arrow bi bi-chevron-right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item"> <a href="{{route('rests.create')}}" class="nav-link active"> <i class="nav-icon bi bi-circle"></i>
+                                    <p>Add Rest</p>
+                                </a> </li>
+                            <li class="nav-item"> <a href="{{route('rests.index')}}" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+                                    <p>Show Rests</p>
+                                </a> </li>
+
+                        </ul>
+                    </li>
 
 
 
