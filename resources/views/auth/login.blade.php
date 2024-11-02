@@ -22,12 +22,7 @@
                     <div class="input-group-text"> <span class="bi bi-lock-fill"></span> </div>
                 </div> <!--begin::Row-->
 
-                <select class="form-control">
-                    <option class="form-control" name="admin">admin</option>
-                    <option class="form-control" name="guest">guest</option>
-                    <option class="form-control" name="manager">manager</option>
-                </select>
-                <br>
+
                 <div class="row">
                     <div class="col-8">
                         <div class="form-check"> <input class="form-check-input"  name="remember" type="checkbox" value="" id="flexCheckDefault"> <label class="form-check-label" for="flexCheckDefault">

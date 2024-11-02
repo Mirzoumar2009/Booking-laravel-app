@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -8,22 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 class Booking extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'user_id', 'table_id', 'cabin_id', 'booking_time', 'number_of_people', 'status', 'booking_type',
-    ];
 
-    public function user()
+    protected $fillable = ['client_id', 'place_id', 'start_time', 'end_time', 'guests_count', 'status'];
+
+    public function place()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Place::class, 'place_id');
     }
 
-    public function table()
+    public function client()
     {
-        return $this->belongsTo(Table::class);
+        return $this->belongsTo(Client::class, 'client_id');
     }
 
-    public function cabin()
+    public function orders()
     {
-        return $this->belongsTo(Cabin::class);
+        return $this->hasMany(Order::class);
     }
 }

@@ -120,10 +120,10 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            <li class="nav-item"> <a href="{{route('user.create')}}" class="nav-link active"> <i class="nav-icon bi bi-circle"></i>
+                            <li class="nav-item"> <a href="{{route('users.create')}}" class="nav-link active"> <i class="nav-icon bi bi-circle"></i>
                                     <p>Add User</p>
                                 </a> </li>
-                            <li class="nav-item"> <a href="{{route('user.index')}}" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+                            <li class="nav-item"> <a href="{{route('users.index')}}" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
                                     <p>Show Users</p>
                                 </a> </li>
 

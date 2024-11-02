@@ -15,8 +15,5 @@
     <label for="">password:</label>
     {{$user->password}}<br>
     <hr>
-    <label for="">role:</label>
-    {{$user->email}}<br>
-    <hr>
-    <a class="btn btn-outline-primary" href="{{route('user.index')}}">back</a>
+    <a class="btn btn-outline-primary" href="{{route('users.index')}}">back</a>
 @endsection
